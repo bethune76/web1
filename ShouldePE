@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shoulder PE</title>
+
+
+  <style>
+    
+    input {
+    color: blue;
+    font-size: 18px;
+    }
+
+  </style>
+
+
+
+
+
+
+</head>
+<body>
+  <div style="display: flex;">
+
+
+    <div style="flex: 1; padding: 20px;">
+      <h2>Shoulder PE <br><br>
+      FF: 
+      <input id="FF_R" placeholder="R" onkeyup="updateTextDisplay()" style="width: 30px;">/
+      <input id="FF_L" placeholder="L" onkeyup="updateTextDisplay()" style="width: 30px;"> &nbsp;&nbsp;
+
+      IR:
+      <input id="IR_R" placeholder="R" onkeyup="updateTextDisplay()" style="width: 30px;">/
+      <input id="IR_L" placeholder="L" onkeyup="updateTextDisplay()" style="width: 30px;"> &nbsp;&nbsp;
+
+      ER:
+      <input id="ER_R" placeholder="R" onkeyup="updateTextDisplay()" style="width: 30px;">/
+      <input id="ER_L" placeholder="L" onkeyup="updateTextDisplay()" style="width: 30px;"> <br><br>
+
+      Painful Arc:
+      <input id="PA_R" placeholder="R" onkeyup="updateTextDisplay()" style="width: 30px;">/
+      <input id="PA_L" placeholder="L" onkeyup="updateTextDisplay()" style="width: 30px;"> &nbsp;&nbsp;
+
+      Empty Can:
+      <input id="EC_R" placeholder="R" onkeyup="updateTextDisplay()" style="width: 30px;">/
+      <input id="EC_L" placeholder="L" onkeyup="updateTextDisplay()" style="width: 30px;"> &nbsp;&nbsp;
+
+      Speed:
+      <input id="SP_R" placeholder="R" onkeyup="updateTextDisplay()" style="width: 30px;">/
+      <input id="SP_L" placeholder="L" onkeyup="updateTextDisplay()" style="width: 30px;"> <br><br>
+
+      O'Brien:
+      <input id="OB_R" placeholder="R" onkeyup="updateTextDisplay()" style="width: 30px;">/
+      <input id="OB_L" placeholder="L" onkeyup="updateTextDisplay()" style="width: 30px;"> &nbsp;&nbsp;
+
+      Yergason:
+      <input id="YG_R" placeholder="R" onkeyup="updateTextDisplay()" style="width: 30px;">/
+      <input id="YG_L" placeholder="L" onkeyup="updateTextDisplay()" style="width: 30px;"> <br><br>
+
+      Belly Press:
+      <input id="BP_R" placeholder="R" onkeyup="updateTextDisplay()" style="width: 30px;">/
+      <input id="BP_L" placeholder="L" onkeyup="updateTextDisplay()" style="width: 30px;"> &nbsp;&nbsp;
+
+      Active ER:
+      <input id="AE_R" placeholder="R" onkeyup="updateTextDisplay()" style="width: 30px;">/
+      <input id="AE_L" placeholder="L" onkeyup="updateTextDisplay()" style="width: 30px;"> &nbsp;&nbsp;
+
+      ER lag:
+      <input id="EL_R" placeholder="R" onkeyup="updateTextDisplay()" style="width: 30px;">/
+      <input id="EL_L" placeholder="L" onkeyup="updateTextDisplay()" style="width: 30px;"> &nbsp;&nbsp;
+
+      </h2>
+    </div>
+
+
+    <div style="flex: 1; padding: 20px;">
+      <h2>Shoulder PE</h2>
+      <h3 id="FF"></h3>
+      <h3 id="PA"></h3>
+      <h3 id="OB"></h3>
+      <h3 id="BP"></h3>
+
+
+    </div>
+
+
+  </div>
+
+  <script>
+    document.getElementById('FF_R').focus();
+
+
+    function updateTextDisplay() {
+      const FF_R = document.getElementById('FF_R').value;
+      const FF_L = document.getElementById('FF_L').value;
+
+      const IR_R = document.getElementById('IR_R').value.toUpperCase();
+      const IR_L = document.getElementById('IR_L').value.toUpperCase();
+
+      const ER_R = document.getElementById('ER_R').value;
+      const ER_L = document.getElementById('ER_L').value;
+
+      const PA_R = document.getElementById('PA_R').value;
+      const PA_L = document.getElementById('PA_L').value;
+
+      const EC_R = document.getElementById('EC_R').value;
+      const EC_L = document.getElementById('EC_L').value;
+
+      const SP_R = document.getElementById('SP_R').value;
+      const SP_L = document.getElementById('SP_L').value;
+
+      const OB_R = document.getElementById('OB_R').value;
+      const OB_L = document.getElementById('OB_L').value;
+
+      const YG_R = document.getElementById('YG_R').value;
+      const YG_L = document.getElementById('YG_L').value;
+
+      const BP_R = document.getElementById('BP_R').value;
+      const BP_L = document.getElementById('BP_L').value;
+
+      const AE_R = document.getElementById('AE_R').value;
+      const AE_L = document.getElementById('AE_L').value;
+      
+      const EL_R = document.getElementById('EL_R').value;
+      const EL_L = document.getElementById('EL_L').value;
+
+      document.getElementById('FF').textContent = `FF:( ${FF_R} / ${FF_L} ) , IR:( ${IR_R} / ${IR_L} ) , ER:( ${ER_R} / ${ER_L} )`;
+      document.getElementById('PA').textContent = `Painful Arc:( ${PA_R} / ${PA_L} ) , Empty Can:( ${EC_R} / ${EC_L} ) , Speed:( ${SP_R} / ${SP_L} )`;
+      document.getElementById('OB').textContent = `O'Brien:( ${OB_R} / ${OB_L} ) , Yergason:( ${YG_R} / ${YG_L} ) `;
+      document.getElementById('BP').textContent = `Belly Press:( ${BP_R} / ${BP_L} ) , Active ER:( ${AE_R} / ${AE_L} ) , ER lag:( ${EL_R} / ${EL_L} )`;
+
+    }
+  </script>
+</body>
+</html>
+
+
+
